@@ -25,16 +25,25 @@ ul {
     justify-content: space-between;
 }
 
-.wrap li {
-    display: inline-block;
+h1 {
     padding: 10px 20px;
-    border-right: 1px solid dimgray;
+}
+
+.wrap ul {
+    display: flex;
+    padding: 10px 20px;
+}
+
+.wrap li {
+    padding: 10px 20px;
+}
+.aaa {
+    border-left: 1px solid dimgray;
 }
 
 @media screen and (max-width: 767px) {
     .wrap {
         display: block;
-        width: auto;
     }
 
     .wrap li {
