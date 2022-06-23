@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+.demo1 {
+    display: flex;
+    justify-content: space-between;
+    max-width: 960px;
+}
+
+.demo1 div {
+    width: 300px;
+    height: 300px;
+    background: blue;
+    margin-bottom: 10px;
+}
+
+.demo2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 960px;
+}
+
+.demo2 div {
+    background: red;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 10px;
+}
