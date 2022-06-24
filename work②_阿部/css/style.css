@@ -37,7 +37,8 @@ h1 {
 .wrap li {
     padding: 10px 20px;
 }
-.aaa {
+
+.wrap li + li {
     border-left: 1px solid dimgray;
 }
 
@@ -46,9 +47,20 @@ h1 {
         display: block;
     }
 
-    .wrap li {
+    .wrap h1 {
+        font-size: 40px;
+        padding: 10px 20px 0;
+    }
+    .wrap ul {
         display: block;
-        border-right: none;
+        padding: 0 20px;
+    }
+
+    .wrap li + li {
+        border-left: none;
+    }
+
+    .wrap li {
         border-bottom: 1px solid dimgray;
         padding: 10px 0;
     }
