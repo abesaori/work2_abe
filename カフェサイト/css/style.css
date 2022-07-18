@@ -54,7 +54,6 @@ img {
 /* サイト全体 */
 body {
     background: #e8d9bf;
-    padding: 0 10px;
 }
 
 /* ヘッダー */
@@ -112,7 +111,6 @@ body {
 
 /* メイン */
 .main {
-    margin-top: 63px;
     text-align: center;
     max-width: 1000px;
     margin: 0 auto;
@@ -120,7 +118,8 @@ body {
 
 .main_copy {
     font-size: 30px;
-    line-height: 3.8;
+    margin-top: 108px;
+    margin-bottom: 64px;
 }
 
 .main_text {
@@ -128,19 +127,23 @@ body {
     line-height: 1.17;
 }
 
-.main_subtext_pc {
+.main_subtext {
     font-size: 23px;
     line-height: 1.65;
     text-align: center;
     margin-top: 25px;
     margin-bottom: 85px;
 }
-/* spは表示しない */
-.main_subtext_sp {
+/* sp用<br>は表示しない */
+.text_sp {
     display: none;
 }
 
 /* アバウトアス */
+.about_wrap {
+    padding: 0 10px;
+}
+
 .about_wrap {
     display: flex;
     justify-content: space-between;
@@ -148,9 +151,12 @@ body {
     margin: 0 auto;
 }
 /* pc用 */
-.about_image_pc img {
-    width: 500px;
+.about_image_pc {
+    width: 50%;
     height: 560px;
+}
+
+.about_image_pc img {
     border-radius: 0 0 90px 0;
 }
 
@@ -164,7 +170,7 @@ body {
 }
 
 .about_detail {
-    width: 410px;
+    width: 41%;
     align-self: center;
 }
 
@@ -185,6 +191,10 @@ body {
 }
 
 /* メニュー */
+.menu {
+    padding: 0 10px;
+}
+
 .menu_logo {
     margin: 0 auto;
     width: 151px;
@@ -204,13 +214,11 @@ body {
 }
 /* pc表示 */
 .menu_image_pc img {
-    max-width: 100%;
-    height: 200px;
     border-radius: 0 40px 0 0;
 }
 
-.manu_content {
-    max-width: 300px;
+.menu_detail {
+    width: 30%;
 }
 
 .menu_title {
@@ -227,6 +235,10 @@ body {
 }
 
 /* ギャラリー */
+.gallery {
+    padding: 0 10px;
+}
+
 .gallery_logo {
     margin: 0 auto;
     margin-top: 90px;
@@ -274,7 +286,7 @@ body {
 }
 
 .info_wrap {
-    margin: 38px 165px;
+    margin: 38px;
 }
 .info_content {
     display: flex;
@@ -306,6 +318,11 @@ iframe {
 }
 
 /* フッター */
+.footer {
+    padding: 0 10px;
+    background: #fff;
+}
+
 .shop {
     height: 390px;
     background: #fff;
@@ -430,22 +447,19 @@ iframe {
     }
 
     .main_text {
-        font-size: 36px;
+        font-size: 9.8vw;
         line-height: 1.15;
         margin-bottom: 13px;
     }
-    .main_subtext_sp {
-        display: block;
+    .main_subtext {
         font-size: 16px;
         line-height: 1.875;
-        margin-top: 0;
-        text-align: center;
-        margin-bottom: 65px;
+        margin-top: 17px;
+        margin-bottom: 59px;
     }
 
-    /* pc用は表示しない */
-    .main_subtext_pc {
-        display: none;
+    .text_sp {
+        display: block;
     }
 
     /* アバウトアス */
@@ -463,7 +477,7 @@ iframe {
         vertical-align: top;
     }
     /* pc用 */
-    .about_image_pc img {
+    .about_image_pc {
         display: none;
     }
 
@@ -514,15 +528,18 @@ iframe {
         display: none;
     }
     /* sp表示 */
+    .menu_detail {
+        width: 100%;
+    }
     .menu_image_sp img {
         display: block;
-        max-width: 100%;
         height: 200px;
         border-radius: 0 40px 0 0;
         margin: 0 auto;
     }
 
     .manu_content {
+        width: 85%;
         margin: 0 auto;
     }
     .menu_title {
