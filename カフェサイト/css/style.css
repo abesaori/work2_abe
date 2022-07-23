@@ -97,14 +97,19 @@ body {
     display: block;
 }
 
-.slider img {
+.slide_wrap {
+    display: flex;
+    overflow: hidden;
     width: 100%;
+}
+
+.sp_nav {
+    display: none;
 }
 
 /* メイン */
 .main {
     text-align: center;
-    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -196,12 +201,8 @@ body {
     margin: 0 auto;
     max-width: 1000px;
 }
-/* sp非表示 */
-.menu_image_sp img {
-    display: none;
-}
-/* pc表示 */
-.menu_image_pc img {
+
+.menu_image img {
     border-radius: 0 40px 0 0;
 }
 
@@ -230,8 +231,7 @@ body {
     width: 245px;
 }
 
-/* スライダー写真 */
-
+/* スライダー */
 /* pc表示 */
 .slider_wrap {
     display: flex;
@@ -244,6 +244,19 @@ body {
 
 .sliderimg_pc img {
     max-width: 38.4vw;
+}
+
+.sliderimg_pc {
+    animation: loop-slide 25s linear 1s infinite;
+}
+
+@keyframes loop-slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
 
 /* sp非表示 */
@@ -266,7 +279,6 @@ body {
 .info {
     display: flex;
     justify-content: center;
-    max-width: 1000px;
     margin: 0 auto;
     border: #4f260b 3.6px solid;
     background: #fff;
@@ -312,14 +324,12 @@ iframe {
 }
 
 .shop {
-    height: 390px;
     background: #fff;
 }
 
 .shop_wrap {
     display: flex;
     text-align: left;
-    max-width: 1000px;
     margin: 0 auto;
     padding-top: 80px;
 }
@@ -447,46 +457,21 @@ iframe {
     }
 
     /* メイン */
-    .main {
-        margin-top: 0;
-        max-width: 1100px;
-    }
-
     .main_copy {
-        font-size: 1.55vw;
-        line-height: 1;
-        margin-top: 43px;
-        margin-bottom: 30px;
+        font-size: 3vw;
     }
 
     .main_text {
-        font-size: 7.5vw;
-        line-height: 1.17;
-        margin-bottom: 13px;
-    }
-    .main_subtext {
-        font-size: 2.1vw;
-        line-height: 1.875;
-        margin-top: 17px;
-        margin-bottom: 59px;
+        font-size: 8.2vw;
     }
 
-    .text_sp {
-        display: block;
+    .main_subtext {
+        font-size: 2.3vw;
     }
 
     /* アバウトアス */
     .about_copy {
-        font-size: 4vw;
-        line-height: 1.25;
-        margin-top: 31px;
-        text-align: left;
-    }
-
-    .about_text {
-        font-size: 1.45vw;
-        line-height: 1.75;
-        margin-top: 20px;
+        font-size: 4.4vw;
     }
 }
 
@@ -521,20 +506,39 @@ iframe {
         display: none;
     }
 
+    /* メイン */
+    .main_copy {
+        font-size: 4.5vw;
+        margin-top: 44px;
+        margin-bottom: 30px;
+    }
+
+    .main_text {
+        font-size: 10.1vw;
+    }
+
+    .main_subtext {
+        font-size: 4.26vw;
+        line-height: 1.875;
+        margin-top: 17px;
+        margin-bottom: 59px;
+    }
+
+    .text_sp {
+        display: block;
+    }
+
     /* アバウトアス */
     .about_wrap {
         display: block;
-        max-width: 767px;
         margin: 0 auto;
+        padding: 0;
     }
 
     .about_detail {
         width: 100%;
     }
 
-    .abut_logo img {
-        vertical-align: top;
-    }
     /* pc用 */
     .about_image_pc {
         display: none;
@@ -543,8 +547,10 @@ iframe {
     /* sp用 */
     .about_image_sp {
         display: block;
-        padding: 0;
-        margin-top: 15px;
+        padding-top: 15px;
+    }
+
+    .about_image_sp img {
         width: 100%;
     }
 
@@ -557,16 +563,22 @@ iframe {
         margin: 0 auto;
     }
 
+    .about_content {
+        padding: 0 10px;
+    }
+
     .about_copy {
-        font-size: 4.69vw;
+        font-size: 9.6vw;
         line-height: 1.25;
         margin-top: 31px;
         text-align: left;
     }
 
     .about_text {
+        font-size: 4.26vw;
         line-height: 1.75;
         margin-top: 20px;
+        padding: 0 10px;
     }
 
     /* メニュー */
@@ -580,30 +592,22 @@ iframe {
         margin-bottom: 20px;
     }
 
-    /* pc非表示 */
-    .menu_image_pc img {
-        display: none;
-    }
-    /* sp表示 */
     .menu_detail {
         width: 100%;
-    }
-    .menu_image_sp img {
-        display: block;
-        height: 200px;
-        margin: 0 auto;
+        padding: 0 35px;
+        box-sizing: border-box;
     }
 
-    .menu_content {
-        max-width: 300px;
-        margin: 0 auto;
+    .menu_image img {
+        width: 100%;
     }
 
     .menu_title {
-        font-size: 40px;
+        font-size: 10.6vw;
     }
 
     .menu_text {
+        font-size: 4.5vw;
         margin-top: 25px;
         margin-bottom: 55px;
     }
@@ -644,7 +648,6 @@ iframe {
     }
 
     .info {
-        display: block;
         padding: 25px 25px 0 25px;
     }
 
@@ -703,9 +706,6 @@ iframe {
 
     /* トップボタン */
     .top_btn {
-        position: fixed;
-        right: 20px;
-        bottom: 20px;
         width: 100px;
     }
 }
