@@ -8,6 +8,8 @@
     <title>DESING CAFE</title>
     <meta name="description" content="cafeのサイトです">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -25,19 +27,28 @@
                     <li><a href="#ACCESS">ACCESS</a></li>
                 </ul>
             </nav>
-            <!-- ハンバーガーメニュー -->
-            <div class="toggle_btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
+            <!-- スマホ用のナビを作る -->
+            <div class="sp_btn"> <span></span></div>
+            <nav class="sp_nav">
+                <ul>
+                    <!--ページ内リンクを入れる-->
+                    <li><a href="#ABOUT US">ABOUT US</a></li>
+                    <li><a href="#MENU">MENU</a></li>
+                    <li><a href="#GALLERY">GALLERY</a></li>
+                    <li><a href="#EVENT">EVENT</a></li>
+                    <li><a href="#ACCESS">ACCESS</a></li>
+                </ul>
+            </nav>
         </div>
 
         <!-- ヘッダー写真 -->
         <ul class="slider">
-            <li><img class="img-pc" src="images/pc_first-100.jpg" alt="店内の様子"></li>
-            <li><img class="img-sp" src="images/sp_main_vs@2x-100.jpg" alt="店内の様子"></li>
+            <li>
+                <picture>
+                    <source srcset="images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
+                    <img src="images/pc_first-100.jpg" alt="店内の様子">
+                </picture>
+            </li>
         </ul>
     </header>
 
@@ -83,8 +94,8 @@
             <!-- ドリンク -->
             <div class="menu_detail">
                 <div class="menu_image_pc"><img src="images/pc_menu_drink-100.jpg" alt="ドリンクイメージ">
-                    <div class="menu_image_sp"><img src="images/drink_sp@2x-100.jpg" alt="スイーツイメージ">
-                        <div class="manu_content">
+                    <div class="menu_image_sp"><img src="images/drink_sp@2x-100.jpg" alt="ドリンクイメージ">
+                        <div class="menu_content">
                             <h3 class="menu_title">Drink</h3>
                             <p class="menu_text">ドリンクメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。
                             </p>
@@ -96,7 +107,7 @@
             <div class="menu_detail">
                 <div class="menu_image_pc"><img src="images/pc_menu_food-100.jpg" alt="フードイメージ">
                     <div class="menu_image_sp"><img src="images/food_sp@2x-100.jpg" alt="フードイメージ">
-                        <div class="manu_content">
+                        <div class="menu_content">
                             <h3 class="menu_title">Food</h3>
                             <p class="menu_text">フードメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。
                             </p>
@@ -108,7 +119,7 @@
             <div class="menu_detail">
                 <div class="menu_image_pc"><img src="images/pc_menu_sweets-100.jpg" alt="スイーツイメージ">
                     <div class="menu_image_sp"><img src="images/cake_sp@2x-100.jpg" alt="スイーツイメージ">
-                        <div class="manu_content">
+                        <div class="menu_content">
                             <h3 class="menu_title">Sweets</h3>
                             <p class="menu_text">スイーツメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。
                             </p>
@@ -203,6 +214,16 @@
             </a>
         </p>
     </footer>
+
+    <script>
+        $(function () {
+            $('.sp_btn').click(function () {
+                $('.sp_nav').fadeToggle();
+
+                $('.sp_btn').toggleClass('open');
+            });
+        });
+    </script>
 </body>
 
 </html>
