@@ -243,11 +243,11 @@ body {
 }
 
 .sliderimg_pc img {
-    max-width: 38.4vw;
+    max-width: 20vw;
 }
 
 .sliderimg_pc {
-    animation: loop-slide 25s linear 1s infinite;
+    animation: loop-slide 25s linear 1s infinite both;
 }
 
 @keyframes loop-slide {
@@ -280,6 +280,7 @@ body {
     display: flex;
     justify-content: center;
     margin: 0 auto;
+    max-width: 1000px;
     border: #4f260b 3.6px solid;
     background: #fff;
     box-sizing: border-box;
@@ -331,6 +332,7 @@ iframe {
     display: flex;
     text-align: left;
     margin: 0 auto;
+    max-width: 1000px;
     padding-top: 80px;
 }
 
@@ -660,13 +662,13 @@ iframe {
     }
 
     .info_content p {
-        line-height: 1;
+        line-height: 1.3;
         font-size: 16px;
     }
 
     .info_text {
         padding-left: 0;
-        padding-bottom: 28px;
+        padding-bottom: 23px;
     }
 
     /* アクセス */
@@ -701,7 +703,7 @@ iframe {
     }
 
     .company {
-        padding-top: 44px;
+        padding: 44px 0;
     }
 
     /* トップボタン */
