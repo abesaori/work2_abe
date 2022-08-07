@@ -67,8 +67,11 @@ body {
     left: 0;
     width: 100%;
     box-sizing: border-box;
+    z-index: 100;
 }
-
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
 .logo {
     width: 226px;
 }
@@ -97,12 +100,18 @@ body {
     display: block;
 }
 
-.slide_wrap {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
+/* スライダー調整 */
+.slick-dots {
+    bottom: 25px;
 }
 
+.slick-dots li button:before {
+    color: #fff;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #fff;
+}
 .sp_nav {
     display: none;
 }
@@ -248,6 +257,16 @@ body {
 
 .sliderimg_pc {
     animation: loop-slide 25s linear 1s infinite both;
+}
+
+/* sp非表示 */
+.sliderimg_sp {
+    display: none;
+}
+
+/* モーダルウィンドウ 枚数非表示*/
+.lb-data .lb-number {
+    display: none !important;
 }
 
 @keyframes loop-slide {
