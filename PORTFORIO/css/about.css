@@ -1,0 +1,294 @@
+@charset "utf-8";
+/* リセット */
+html,
+body,
+header,
+footer,
+main,
+section,
+h1,
+h2,
+h3,
+ul,
+li,
+p,
+dl,
+dt,
+dd {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #2d2d2d;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium",
+        "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    /* 全体メトリクス */
+    font-feature-settings: "palt";
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    /* アニメーション設定 */
+    transition: 0.2s;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+/* btn */
+.nav_manu {
+    display: none;
+}
+
+.hamburger {
+    display: block;
+    position: fixed;
+    right: 51px;
+    top: 51px;
+    height: 35px;
+    z-index: 100;
+}
+
+.hamburger span {
+    background: #515151;
+    display: block;
+    width: 54px;
+    height: 4px;
+    position: relative;
+    top: 15px;
+    border-radius: 20px;
+}
+
+.hamburger span::before,
+.hamburger span::after {
+    content: "";
+    background: #515151;
+    display: block;
+    width: 54px;
+    height: 4px;
+    position: absolute;
+    transition: 0.3s;
+    border-radius: 20px;
+}
+
+.hamburger span::before {
+    bottom: 15px;
+}
+.hamburger span::after {
+    top: 15px;
+}
+/* btn_open */
+.open span {
+    background: transparent;
+}
+
+.open span::before {
+    bottom: 0px;
+    transform: rotate(135deg);
+}
+
+.open span::after {
+    top: 0px;
+    transform: rotate(45deg);
+}
+
+/* menu */
+.menu:hover {
+    opacity: 0.5;
+}
+.nav_wrap {
+    background: #f2e4ea;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+}
+
+.nav-top {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 80px;
+    padding-bottom: 3px;
+}
+.nav_wrap a {
+    display: block;
+}
+.nav_wrap li {
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 28px;
+    font-weight: bold;
+    border-bottom: rgba(45, 45, 45, 0.5) 1px solid;
+    padding: 55px 0 15px 40px;
+    box-sizing: border-box;
+}
+.nav_wrap span {
+    font-size: 18px;
+    color: #007598;
+    padding-left: 14px;
+}
+/* line */
+.about {
+    background-image: url("about_line.jpg");
+    height: 100vh;
+}
+/* top */
+.logo_img {
+    display: block;
+    position: absolute;
+    top: 5%;
+    left: 45%;
+    width: 100%;
+}
+
+/* about me */
+.about {
+    position: absolute;
+    top: 25%;
+}
+.about_wrap {
+    display: flex;
+}
+.about_detail {
+    margin-left: 65px;
+}
+.title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 25px;
+    letter-spacing: 1.5px;
+}
+.subtitle {
+    font-size: 16px;
+    font-weight: bold;
+}
+.myself {
+    margin-top: 85px;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    line-height: 1.7em;
+}
+.myself_text {
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 2em;
+}
+/* story */
+.story p {
+    font-size: 18px;
+    line-height: 2.1em;
+}
+.strong {
+    font-weight: bold;
+    font-size: 20px;
+}
+/* 01 */
+.story_wrap01 {
+    position: absolute;
+    top: 100%;
+    left: 15%;
+    max-width: 648px;
+    text-align: left;
+}
+.text_number01 {
+    position: absolute;
+    top: -25%;
+    left: -13%;
+}
+/* 02 */
+.story_wrap02 {
+    position: absolute;
+    top: 140%;
+    right: 10%;
+    max-width: 648px;
+    text-align: left;
+}
+.text_number02 {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+}
+/* 03 */
+.story_wrap03 {
+    position: absolute;
+    top: 195%;
+    left: 15%;
+    max-width: 648px;
+    text-align: left;
+}
+.text_number03 {
+    position: absolute;
+    top: -25%;
+    left: 15%;
+}
+/* 04 */
+.story_wrap04 {
+    position: absolute;
+    top: 240%;
+    right: 10%;
+    max-width: 648px;
+    text-align: left;
+}
+.text_number04 {
+    position: absolute;
+    top: -8%;
+    right: 10%;
+}
+
+/* 一覧戻る btn */
+.icon {
+    padding-left: 15px;
+}
+.contact {
+    border: 1px solid #f26146;
+    width: 282px;
+    display: flex;
+    justify-content: center;
+    background: #f26146;
+    color: #fff;
+    border-radius: 100px;
+    padding: 20px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 20;
+}
+.contact {
+    position: absolute;
+    top: 280%;
+}
+.contact:hover {
+    border: 4px solid #f26146;
+    width: 282px;
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    color: #f26146;
+    border-radius: 100px;
+    padding: 20px 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* footer */
+.footer {
+    padding: 65px 0 50px;
+    text-align: center;
+    border-top: 1px solid rgba(45, 45, 45, 0.5);
+}

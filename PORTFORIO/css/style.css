@@ -31,12 +31,7 @@ a {
     /*色を消す*/
     color: inherit;
     /* アニメーション設定 */
-    transition: 0.3s;
-}
-
-a:hover {
-    /* aタブにマウスを置いたときに半透明に */
-    opacity: 0.5;
+    transition: 0.2s;
 }
 
 ul {
@@ -55,7 +50,7 @@ img {
     margin: 0 auto;
     width: 203px;
     margin-bottom: 18px;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 /* btn */
@@ -129,20 +124,25 @@ img {
 
 .nav-top {
     text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
     font-size: 40px;
     font-weight: bold;
-    padding-top: 150px;
+    padding-top: 80px;
     padding-bottom: 3px;
 }
-.nav_wrap li {
+.nav_wrap a {
     display: block;
+}
+.nav_wrap li {
+    max-width: 1000px;
+    margin: 0 auto;
     font-size: 28px;
     font-weight: bold;
     border-bottom: rgba(45, 45, 45, 0.5) 1px solid;
-    margin: 0 30px;
     padding: 55px 0 15px 40px;
+    box-sizing: border-box;
 }
-
 .nav_wrap span {
     font-size: 18px;
     color: #007598;
@@ -153,12 +153,11 @@ img {
 .top-page {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     max-width: 1000px;
     margin: 0 auto;
-}
-
-.main_read {
-    display: block;
+    height: 100vh;
+    z-index: 33;
 }
 .top-page p {
     color: #007598;
@@ -179,7 +178,6 @@ img {
 
 .top-page img {
     max-width: 57.8%;
-    height: auto;
 }
 
 /* scroll bar*/
@@ -234,22 +232,24 @@ img {
 
 /* service */
 .wave-top {
+    position: absolute;
+    left: 0;
+    bottom: 0;
     width: 100%;
-    margin-top: -80px;
-    height: 31vh;
-    display: inline-block;
+    height: 13vh;
+    margin-bottom: -1px;
+}
+.wave-under {
+    width: 100%;
+    height: 15vh;
 }
 .backcolor {
     background: rgba(246, 195, 217, 0.5);
-}
-.title_wrap {
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
+    margin-top: -123px;
 }
 .service_wrap {
     display: flex;
-    max-width: 1366px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 .service_detailwrap {
@@ -260,7 +260,7 @@ img {
 }
 .shadow_logo img {
     max-width: 430px;
-    margin-top: -130px;
+    margin-top: -50px;
 }
 .copy {
     max-width: 625px;
@@ -273,17 +273,19 @@ img {
     margin: 100px 0 50px 50px;
 }
 /* service-text */
-.title {
-    font-size: 40px;
+.title,
+.subtitle {
+    text-align: center;
     font-weight: bold;
     color: #007598;
+}
+.title {
+    font-size: 40px;
 }
 .subtitle {
     font-size: 16px;
-    font-weight: bold;
-    color: #007598;
 }
-.text {
+.text_service {
     font-size: 25px;
 }
 .text_01 {
@@ -295,14 +297,14 @@ img {
     margin-top: 20px;
 }
 /* work */
+.back_color {
+    background: rgba(246, 195, 217, 0.5);
+}
 .work {
     display: flex;
     justify-content: right;
     max-width: 1000px;
     margin: 0 auto;
-}
-.work_wrap {
-    text-align: center;
 }
 .work_wrap h2 {
     padding-top: 110px;
@@ -315,26 +317,23 @@ img {
 .slider {
     max-width: 1366px;
     margin: 0 auto;
+    align-items: center;
+    overflow: hidden;
 }
-.slick-next:before {
-    content: none;
+.slider li {
+    margin: 0 20px;
 }
-.slick-prev:before {
-    content: none;
+.work_slider img {
+    max-width: 100%;
 }
-
+.slick-dots {
+    bottom: -35px;
+}
 .viewmore {
     border: 1px solid #fff;
     width: 282px;
     display: flex;
     justify-content: center;
-}
-.viewmore_pc {
-    display: flex;
-    justify-content: center;
-    margin-top: 75px;
-}
-.viewmore {
     background: #fff;
     border-radius: 100px;
     padding: 20px 25px;
@@ -342,7 +341,215 @@ img {
     font-weight: bold;
     z-index: 3;
 }
-.wave-under {
+.viewmore_work {
+    display: flex;
+    justify-content: center;
+    margin-top: 75px;
+}
+/* be oneself */
+.be_oneself {
+    max-width: 1366px;
+    margin: 0 auto;
+}
+.oneself_wrap {
+    max-width: 1366px;
+    position: relative;
+    margin-top: -50px;
+}
+.woman_text {
+    font-size: 43px;
+    font-weight: bold;
+    line-height: 1.58em;
+    color: #007598;
+}
+.woman_wrap {
+    display: flex;
+    position: absolute;
+    top: 90px;
+    left: 70px;
+}
+.woman_conteiner {
+    margin-top: -30px;
+}
+
+/* about me */
+.aboutme {
+    background-color: rgba(0, 117, 152, 0.5);
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 30px;
+    margin-top: 230px;
+}
+.aboutme_wrap {
+    display: flex;
+    justify-content: center;
+}
+.aboutme_img {
+    width: 295px;
+    margin-top: 69px;
+}
+.viewmore_about {
+    display: flex;
+    justify-content: center;
+    padding: 35px 0 52px;
+}
+
+/* about me:text */
+.about_wrap {
+    margin-top: 96px;
+    margin-left: 55px;
+}
+.about {
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #fff;
+    text-align: justify;
+}
+.about_sub {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 2.43em;
+    color: #fff;
+    text-align: justify;
+}
+.about_text {
+    font-size: 25px;
+    margin-top: 39px;
+    color: #fff;
+    text-align: justify;
+}
+.about_subtext {
+    font-size: 18px;
+    line-height: 1.6em;
+    margin-top: 25px;
+    font-weight: normal;
+    color: #fff;
+    text-align: justify;
+}
+
+/* Q&A */
+.QandA_wrap h2 {
+    padding-top: 100px;
+}
+.QandA_sub {
+    padding-top: 5px;
+}
+.QandA_wrap {
+    text-align: center;
+}
+.QandA_detail {
+    display: inline-block;
+    text-align: left;
+    padding-top: 27px;
+}
+.QandA_conteiner {
+    padding: 11px 0;
+}
+.Q_text {
+    font-size: 18px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+.Q_img {
+    vertical-align: middle;
+    padding-right: 17px;
+}
+.a_text {
+    font-size: 17px;
+    line-height: 1.7em;
+}
+/* 基本の矢印削除 */
+details summary {
+    list-style: none;
+    cursor: pointer;
+}
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+/* 矢印をプラスに変更 */
+details[open] summary::before {
+    /* 開いている時のCSSを記述 */
+    content: "\f068";
+}
+details summary::before {
+    font-family: FontAwesome;
+    content: "\f067";
+    margin-right: 20px;
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+
+/* contact */
+.contact_wave {
     width: 100%;
-    height: 31vh;
+    height: 30vh;
+    margin-bottom: -1px;
+    padding-top: 15px;
+}
+.contactunder_wave {
+    width: 100%;
+    height: 30vh;
+    margin-top: -1.3px;
+}
+.contact {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+/* contact text */
+.request_text {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 44px 0 37px;
+}
+.request_sub {
+    font-size: 20px;
+    line-height: 1.75em;
+}
+.importent {
+    font-size: 15px;
+    line-height: 2.5em;
+}
+.viewmore_cta {
+    border: 1px solid #f26146;
+    width: 282px;
+    display: flex;
+    justify-content: center;
+    background: #f26146;
+    color: #fff;
+    border-radius: 100px;
+    padding: 20px 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.viewmore_contact {
+    display: flex;
+    justify-content: center;
+    margin-top: 56px;
+}
+.viewmore_cta:hover {
+    border: 4px solid #f26146;
+    width: 282px;
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    color: #f26146;
+    border-radius: 100px;
+    padding: 20px 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* top-btn*/
+.top_btn {
+    margin: 105px 0 140px;
+    display: flex;
+    justify-content: center;
+}
+/* footer */
+.footer {
+    text-align: center;
+    padding: 15px 0 50px;
+    border-top: 1px rgba(45, 45, 45, 0.3) solid;
 }
